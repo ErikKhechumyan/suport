@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Yerkir</h1>
+    <h2>Qaxaq</h2>
+    <h3>Poxoc</h3>
+    {% for i in Poxoc_list %}
+        {% for j in i.yer_poxoc.all %}
+            <a href="{% url 'Page4' i.id %}">
+                <button>{{j.name}}</button>
+            </a>
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Support</h1>
+    <a href="{% url 'Page0' %}"><button>Exit</button></a>
+    <form method="post">
+        {% csrf_token %}
+        <p>
+            <input type="email" name="email" placeholder="Enter your email">
+        </p>
+        <p>
+            <input type="text" name="text" style="height: 100px;" size="100">
+        </p>
+        <button type="submit">Send</button>
+    </form>
+</body>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'support' %}"><button style="width: 100px;" >Support</button></a>
+    <h1 style="color: brown;">Yerkir</h1>
+    {% for i in Yerkir_list %}
+        <a href="{% url 'Page1' i.id %}">
+            <button >{{Yerkir}}</button>
+            <img src="{{ i.img.url }}" alt="{{ i.name}}" width="200px">
+        </a>
+    {% endfor %}
+</body>
+</html>

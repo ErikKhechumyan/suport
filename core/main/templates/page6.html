@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>molorak</h1>
+    <a href="{% url 'Page0' %}"><button>Exit</button></a>
+    <form method="post">
+        {% for i in Poxoc_list %}
+            {% for j in i.yer_poxoc.all %}
+
+                <button>{{j.name}}</button>
+
+            {% endfor %}
+        {% endfor %}
+    </form>
+</body>
